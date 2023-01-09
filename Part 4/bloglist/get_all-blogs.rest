@@ -1,0 +1,84 @@
+GET http://localhost:3003/api/blogs 
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title": "test6",
+    "author": "Author6",
+    "url": "url6",
+    "likes": 12
+}
+###
+PUT http://localhost:3003/api/blogs/613b6dd64ce72875e16ee498
+Content-Type: application/json
+
+{
+    "title": "test7",
+    "author": "Author7",
+    "url": "url7",
+    "likes": 11
+}
+###
+DELETE http://localhost:3003/api/blogs/613aa8c02r74311ea985e297
+
+
+### 
+GET http://localhost:3003/api/users
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "testA",
+    "name": "testA",
+    "password": "jiu"
+}
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "test1",
+    "name": "test1",
+    "password": "huo"
+}
+### 
+
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title": "test8",
+    "author": "Author8",
+    "url": "url8",
+    "likes": 5,
+    "userId": "613b6dd64ce72875e16ee498"
+}
+
+
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+    "username":"test1",
+    "password":"huo"
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+{
+    "title": "test middleware 4",
+    "author": "Author0",
+    "url": "url middleware 4",
+    "likes": 8
+}
+
+###
+DELETE http://localhost:3003/api/blogs/613aa8c02r74311ea985e297
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
